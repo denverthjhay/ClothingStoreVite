@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 type WrapperProps = {
   background: string;
@@ -35,7 +35,7 @@ export const AddButton = styled.div<AddButtonProps>`
   right: 20px;
   width: 20px;
   height: 20px;
-  background: ${(props) => (props.isInCart ? '#E55336' : '#60c95d')};
+  background: ${(props) => (props.isInCart ? "#E55336" : "#60c95d")};
   border-radius: 50%;
   padding: 5px;
   cursor: pointer;
@@ -59,7 +59,7 @@ export const AddButton2 = styled.div<AddButtonPropsWish>`
   right: 60px;
   width: 20px;
   height: 20px;
-  background: ${(props) => (props.isInWish ? '#E55336' : '#60c95d')};
+  background: ${(props) => (props.isInWish ? "#E55336" : "#60c95d")};
   border-radius: 50%;
   padding: 5px;
   cursor: pointer;
@@ -74,13 +74,17 @@ export const AddButton2 = styled.div<AddButtonPropsWish>`
   }
 `;
 
-export const TextContainer = styled.div`
-  display: grid;
-  gap: 10px;
+export const InfoContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(2px);
-  width: 100%;
-  padding: 20px;
+  padding: 20px 15px;
+`;
+
+export const TextContainer = styled.div`
+  display: grid;
 `;
 
 export const Title = styled.p`
@@ -96,4 +100,62 @@ export const SubTitle = styled.p`
   font-size: 15px;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
+`;
+
+export const QtyContainer = styled.div`
+  display: flex;
+  color: white;
+  border: 1px solid white;
+  width: fit-content;
+  height: fit-content;
+  border-Radius: 1em;
+`;
+
+export const Decrement = styled.button`
+  width 30px;
+  height: 30px;
+  background-color: rgba(198, 198, 198, 0.45);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  padding: 0 10px;
+  margin: 1px 0.5px;
+  font-size: 15px;
+  transition: 0.3s;
+  :hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+`;
+
+export const QuantityText = styled.p`
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  margin: 0;
+  color: #ffffff;
+  padding: 0 15px;
+`;
+
+export const Increment = styled.button`
+width 30px;
+height: 30px;
+background-color: rgba(198, 198, 198, 0.45);
+border: none;
+border-radius: 50%;
+color: white;
+padding: 0 10px;
+margin: 1px 1px;
+font-size: 15px;
+transition: 0.3s;
+:hover {
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+  cursor: pointer;
+}
 `;
