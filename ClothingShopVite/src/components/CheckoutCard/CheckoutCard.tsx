@@ -8,18 +8,12 @@ import {
   } from "./CheckoutCard.styled";
   
   import { Product } from "../../models";
-  import { useContext, useState } from "react";
+  import { useContext} from "react";
   import { ClothingShopContext } from "../Context";
   
   export const CheckoutCard = ({ name, imageUrl, price, quantity }: Product) => {
-    const {
-      products,
-      addToCart,
-      removeFromCart,
-      saved,
-      removeFromWishlist,
-      addToWishlist,
-    } = useContext(ClothingShopContext);
+ 
+    useContext(ClothingShopContext);
   
     return (
       <Wrapper>

@@ -28,6 +28,7 @@ import {
       addToWishlist,
       updateCart,
     } = useContext(ClothingShopContext);
+    
     const [isInCart, setIsInCart] = useState(false);
     const [isInWish, setIsInWish] = useState(false);
     const [qty, setQuantity] = useState(quantity);
@@ -108,4 +109,6 @@ import {
         </InfoContainer>
       </Wrapper>
     );
+
+
   };

@@ -9,7 +9,7 @@ const { saved } = useContext(ClothingShopContext);
 
   return (
     <>
-      <Title>{saved.length} {saved.length > 1 ? "items" : "Item"} in your wishlist currently</Title>
+      <Title>{saved.length} {saved.length > 1 ? "Items" : "Item"} in your wishlist currently</Title>
       <ProductsWrapper>
       {saved.map((product: Product, index) => (
           <ProductCard {...product} key={index} />

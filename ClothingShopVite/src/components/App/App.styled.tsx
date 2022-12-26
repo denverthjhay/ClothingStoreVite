@@ -4,7 +4,6 @@ export const Wrapper = styled.div`
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   margin: 40px;
   width: 100%;
-  border: 1px solid green;
 
   display: grid;
   row-gap: 20px;
@@ -18,7 +17,7 @@ export const TitleWrapper = styled.div`
 
   display: grid;
   row-gap: 10px;
-  border: 1px solid black;
+
 
   a {
     text-decoration: none;
@@ -31,7 +30,6 @@ export const LinksWrapper = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  border: 1px solid red;
 
   a {
     text-decoration: none;
