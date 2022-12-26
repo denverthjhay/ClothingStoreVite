@@ -23,14 +23,16 @@ export const ProductsWrapper = styled.div`
 export const CheckoutButton = styled.button`
   margin: auto;
   width: 100px;
-  background-color: transparent;
   padding: 10px;
   border-radius: 5px;
   decoration: none;
-  transition: 0.3s;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  font-size: 15px;
   :hover {
     color: white;
-    background-color: black;
+    background-color: #E55336;
+    border:2px solid #E55336;
     transition: 0.3s;
   }
 `;

@@ -6,6 +6,7 @@ import { Products } from "../Products";
 import { useReducer } from "react";
 import { Product } from "../../models";
 import { ClothingShopContext } from "../Context";
+import { Checkout } from "../Checkout";
 import {
   shopReducer,
   initialState,
@@ -37,17 +38,6 @@ export const App = () => {
     dispatch(remove(updatedCart));
   };
 
-  const updatePrice = (products: []) => {
-    let total = 0;
-    let items = 0;
-    products.forEach(
-      (product: { price: number; quantity: number }) =>
-        (total = total + product.price * product.quantity , items = items + product.quantity)
-    );
-
-    dispatch(update(total));
-    dispatch(totalItems(items));
-  };
 
   const addToWishlist = (product: Product) => {
     const updatedCart = state.saved.concat(product);
@@ -71,6 +61,17 @@ export const App = () => {
     updatePrice(updatedCart);
   };
 
+  const updatePrice = (products: []) => {
+    let total = 0;
+    let items = 0;
+    products.forEach(
+      (product: { price: number; quantity: number }) =>
+        (total = total + product.price * product.quantity , items = items + product.quantity)
+    );
+
+    dispatch(update(total));
+    dispatch(totalItems(items));
+  };
   const value = {
     totalitems: state.totalitems,
     total: state.total,
@@ -93,11 +94,13 @@ export const App = () => {
           <Link to="/">Home</Link>
           <Link to="/wishlist">Wishlist</Link>
           <Link to="/cart">Cart</Link>
+          <Link to="/checkout">Checkout</Link>
         </LinksWrapper>
         <Routes>
           <Route path="/" element={<Products />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </Wrapper>
     </ClothingShopContext.Provider>
